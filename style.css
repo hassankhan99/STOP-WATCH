@@ -1,0 +1,42 @@
+body{
+    background-color: #000000;
+}
+#watch{
+    font-size: 60px;
+    color: #E598B4      ;
+}
+div{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    
+}
+h1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 70px;
+    color: #fff;
+}
+button{
+margin-top: 10px;
+  padding: 15px;
+  font-size: 20px;
+  cursor: pointer;
+}
+#startbtn{
+   background-color: #329533;
+   color: #fff;
+   border-radius: 10px;
+  
+}
+#stopbtn{
+    color: #fff;
+    border-radius: 10px;
+    background-color: #0C83FA;
+}
+#resetbtn{
+    background-color: #ff0000;
+    color: #fff;
+    border-radius: 10px;
+}
