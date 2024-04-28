@@ -1,12 +1,14 @@
 let hour = document.querySelector('#hour');
 let minute = document.querySelector('#minute');
 let second = document.querySelector('#second');
+let startbtn = document.querySelector('#startbtn')
 
 let count = 0;
 let interval;
 
 function startwatch() {
-        console.log("startwatch");
+    document.getElementById("startbtn").disabled = true;
+        // console.log("startwatch");
         interval = setInterval(function () {
             count += 1;
             if (count === 60) {
@@ -16,6 +18,7 @@ function startwatch() {
                 if (parseInt(minute.innerHTML) === 60) {
                     minute.innerHTML = '00';
                     hour.innerHTML = parseInt(hour.innerHTML) + 1;
+                   
                 }
             } else {
                 second.innerHTML = count < 10 ? '0' + count : count;
@@ -24,17 +27,19 @@ function startwatch() {
     }
 
 function stopwatch() {
-    console.log("stopwatch");
+    document.getElementById("startbtn").disabled = false;
+    // console.log("stopwatch");
     clearInterval(interval);
 }
 
 function resetwatch() {
-    console.log("resetwatch");
+    // console.log("resetwatch");
     clearInterval(interval);
     count = 0;
     hour.innerHTML = '00';
     minute.innerHTML = '00';
     second.innerHTML = '00';
+    
 }
 
 
